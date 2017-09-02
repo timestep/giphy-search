@@ -1,24 +1,23 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import { browserHistory } from 'react-router';
 import { routerMiddleware } from 'react-router-redux';
-import rootReducer from '../reducers';
+import rootReducer from './root-reducer';
+import thunk from 'redux-thunk';
 
 const isDevEnv = process.env.NODE_ENV === 'development';
 
 function configureStore(initialState) {
-  const store = compose(
-    _getMiddleware(),
-    ..._getEnhancers()
-  )(createStore)(rootReducer, initialState);
+  const store = compose(_getMiddleware(), ..._getEnhancers())(createStore)(
+    rootReducer,
+    initialState
+  );
 
   _enableHotLoader(store);
   return store;
 }
 
 function _getMiddleware() {
-  let middleware = [
-    routerMiddleware(browserHistory),
-  ];
+  let middleware = [routerMiddleware(browserHistory), thunk];
 
   if (isDevEnv) {
     middleware = [...middleware];
@@ -31,7 +30,7 @@ function _getEnhancers() {
   let enhancers = [];
 
   if (isDevEnv && window.devToolsExtension) {
-    enhancers = [...enhancers, window.devToolsExtension() ];
+    enhancers = [...enhancers, window.devToolsExtension()];
   }
 
   return enhancers;
@@ -45,6 +44,5 @@ function _enableHotLoader(store) {
     });
   }
 }
-
 
 export default configureStore;

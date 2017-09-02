@@ -4,11 +4,13 @@
   "private": true,
   "dependencies": {
     "@rangle/react-scripts": "0.0.11",
+    "axios": "0.16.2",
     "husky": "0.14.3",
     "lint-staged": "4.0.4",
     "prettier": "1.6.1",
     "react": "15.6.1",
-    "react-dom": "15.6.1"
+    "react-dom": "15.6.1",
+    "redux-thunk": "2.2.0"
   },
   "devDependencies": {},
   "lint-staged": {
