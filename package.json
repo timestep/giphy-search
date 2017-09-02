@@ -4,11 +4,21 @@
   "private": true,
   "dependencies": {
     "@rangle/react-scripts": "0.0.11",
+    "husky": "0.14.3",
+    "lint-staged": "4.0.4",
+    "prettier": "1.6.1",
     "react": "15.6.1",
     "react-dom": "15.6.1"
   },
   "devDependencies": {},
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css}": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
+  },
   "scripts": {
+    "precommit": "lint-staged",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
