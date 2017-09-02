@@ -21,6 +21,7 @@
   },
   "scripts": {
     "precommit": "lint-staged",
+    "lint": "node node_modules/eslint/bin/eslint.js src --fix",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
