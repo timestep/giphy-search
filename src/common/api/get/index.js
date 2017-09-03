@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+// TODO: extract to ENV folder outside source code.
 const API_KEY = '?api_key=d530c06de8b54b6c9762039bc3b4d6ff';
 const API = 'https://api.giphy.com/v1/';
 
