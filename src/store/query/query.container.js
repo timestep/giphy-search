@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
 import { QueryComponent } from '../../features/query/query.component';
-import { dataSelector } from './query.selectors';
+import { queryImageSelector } from './query.selectors';
 import { searchGifAction } from './query.actions';
 
 const mapStateToProps = state => ({
-  data: dataSelector(state),
+  image: queryImageSelector(state),
 });
 
 const mapDispatchToProps = dispatch => ({

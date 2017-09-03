@@ -14,7 +14,7 @@ export const searchGifAction = query => {
       const data = await gifQuery(query);
       return dispatch({
         type: QUERY_SUCCESS,
-        payload: data,
+        payload: data.data,
       });
     } catch (error) {
       return dispatch({
