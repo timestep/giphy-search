@@ -12,6 +12,6 @@ export const QueryComponent = ({ data = [], query }) =>  (
 );
 
 QueryComponent.propTypes = {
-  data: PropTypes.array,
+  data: PropTypes.any,
   query: PropTypes.func.isRequired,
 };

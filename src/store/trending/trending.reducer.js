@@ -22,7 +22,7 @@ export const trendingReducer = (state = initialState, action) => {
     return {
       ...state,
       isLoading: false,
-      data: action.payload,
+      data: action.payload.data,
     };
   default:
     return state;

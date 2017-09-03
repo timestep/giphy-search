@@ -3,19 +3,18 @@ import PropTypes from 'prop-types';
 
 export class TrendingComponent extends React.Component {
   componentWillMount() {
-    console.log('hi');
     this.props.getTrendingGifs();
   }
 
   render() {
     const {
-      data,
+      images = [],
     } = this.props;
 
     return (
       <div>
-        {data.map(() => (
-          <div>Hi</div>
+        {images.map(img => (
+          <img src={img.downsized_medium.url}/>
         ))}
       </div>
     );
@@ -23,6 +22,6 @@ export class TrendingComponent extends React.Component {
 }
 
 TrendingComponent.propTypes = {
-  data: PropTypes.data,
+  images: PropTypes.any,
   getTrendingGifs: PropTypes.func.isRequired,
 };

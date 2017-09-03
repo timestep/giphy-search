@@ -4,7 +4,7 @@ import { trendingGifs } from './trending.selectors';
 import { trendingGifsAction } from './trending.actions';
 
 const mapStateToProps = state => ({
-  data: trendingGifs(state),
+  images: trendingGifs(state),
 });
 
 const mapDispatchToProps = dispatch => ({
