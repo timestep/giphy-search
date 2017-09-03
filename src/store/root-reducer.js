@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
-import { reducer as formReducer } from 'redux-form';
+import { appReducer } from './app';
+import { trendingReducer } from './trending';
 
 const rootReducer = combineReducers({
   routing: routerReducer,
-  form: formReducer
+  app: appReducer,
+  trending: trendingReducer,
 });
 
 export default rootReducer;
