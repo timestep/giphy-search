@@ -1,11 +1,17 @@
-import { QUERY_REQUEST, QUERY_SUCCESS, QUERY_FAIL } from './query.actions';
+import {
+  QUERY_REQUEST,
+  QUERY_SUCCESS,
+  QUERY_FAIL,
+  SELECT_HISTORICAL_IMAGE,
+} from './query.actions';
 
 const initialState = {
   isLoading: false,
   query: '',
   queryHistory: [],
+  imageHistory: [],
   error: {},
-  data: [],
+  selectedImage: [],
 };
 
 export const queryReducer = (state = initialState, action) => {
@@ -26,7 +32,13 @@ export const queryReducer = (state = initialState, action) => {
     return {
       ...state,
       isLoading: false,
-      data: action.payload,
+      selectedImage: action.payload,
+      imageHistory: state.imageHistory.concat([action.payload]),
+    };
+  case SELECT_HISTORICAL_IMAGE:
+    return {
+      ...state,
+      selectedImage: state.imageHistory[action.payload],
     };
   default:
     return state;

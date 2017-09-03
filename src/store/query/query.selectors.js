@@ -1,7 +1,18 @@
 import { createSelector } from 'reselect';
 
-export const queryDataSelector = state => state.query.data;
+export const querySelector = state => state.query;
+
+export const historicalQueriesSelector = createSelector(
+  querySelector,
+  query => query.queryHistory,
+);
+
+export const querySelectedImageSelector = createSelector(
+  querySelector,
+  query => query.selectedImage,
+);
+
 export const queryImageSelector = createSelector(
-  queryDataSelector,
-  query => query ? query[0] : {},
+  querySelectedImageSelector,
+  query => query ? query : {},
 );
