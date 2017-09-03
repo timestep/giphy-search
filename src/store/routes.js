@@ -1,5 +1,5 @@
 import React from 'react';
 import { Route } from 'react-router';
-import { AppContainer } from '../store/app';
+import { AppComponent } from '../features/app';
 
-export default <Route path="/" component={AppContainer} />;
+export default <Route path="/" component={AppComponent} />;

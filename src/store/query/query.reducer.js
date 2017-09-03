@@ -1,4 +1,4 @@
-import { QUERY_REQUEST, QUERY_SUCCESS, QUERY_FAIL } from './app.actions';
+import { QUERY_REQUEST, QUERY_SUCCESS, QUERY_FAIL } from './query.actions';
 
 const initialState = {
   isLoading: false,
@@ -8,7 +8,7 @@ const initialState = {
   data: [],
 };
 
-export const appReducer = (state = initialState, action) => {
+export const queryReducer = (state = initialState, action) => {
   switch (action.type) {
   case QUERY_REQUEST:
     return {

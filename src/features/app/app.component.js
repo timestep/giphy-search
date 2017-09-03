@@ -1,17 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { Input } from '../../common/components';
 
-export const AppComponent = ({ data = [], query }) =>  (
+import { QueryContainer } from '../../store';
+import { TrendingContainer } from '../../store';
+
+export const AppContainer = () => (
   <div>
-    <Input onChange={query} />
-    {data.map(() => (
-      <div>Hi</div>
-    ))}
+    <QueryContainer />
+    <TrendingContainer />
   </div>
 );
-
-AppComponent.propTypes = {
-  data: PropTypes.array,
-  query: PropTypes.func.isRequired,
-};

@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
-import { appReducer } from './app';
+import { queryReducer } from './query';
 import { trendingReducer } from './trending';
 
 const rootReducer = combineReducers({
   routing: routerReducer,
-  app: appReducer,
   trending: trendingReducer,
+  query: queryReducer,
 });
 
 export default rootReducer;
