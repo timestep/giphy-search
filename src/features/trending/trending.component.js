@@ -1,12 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class TrendingComponent extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
+export class TrendingComponent extends React.Component {
   componentWillMount() {
+    console.log('hi');
     this.props.getTrendingGifs();
   }
 

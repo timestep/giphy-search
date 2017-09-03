@@ -1,1 +1,1 @@
-export const dataSelector = state => state.data;
+export const trendingGifs = state => state.data;

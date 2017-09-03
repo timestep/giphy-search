@@ -5,7 +5,7 @@ export const TRENDING_SUCCESS = 'TRENDING_SUCCESS';
 export const TRENDING_FAIL = 'TRENDING_FAIL';
 
 export const trendingGifsAction = () => {
-  return async () => {
+  return async dispatch => {
     dispatch({
       type: TRENDING_REQUEST,
     });

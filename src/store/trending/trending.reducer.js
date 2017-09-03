@@ -1,4 +1,4 @@
-import { TRENDING_REQUEST, TRENDING_SUCCESS, TRENDING_FAIL } from './app.actions';
+import { TRENDING_REQUEST, TRENDING_SUCCESS, TRENDING_FAIL } from './trending.actions';
 
 const initialState = {
   isLoading: false,

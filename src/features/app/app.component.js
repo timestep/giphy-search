@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { QueryContainer } from '../../store';
-import { TrendingContainer } from '../../store';
+import { QueryContainer } from '../../store/query';
+import { TrendingContainer } from '../../store/trending';
 
-export const AppContainer = () => (
+export const AppComponent = () => (
   <div>
     <QueryContainer />
     <TrendingContainer />

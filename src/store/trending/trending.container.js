@@ -1,14 +1,17 @@
 import { connect } from 'react-redux';
-import { TrendingComponent } from '../../features';
-import { dataSelector } from './trending.selectors';
+import { TrendingComponent } from '../../features/trending/trending.component';
+import { trendingGifs } from './trending.selectors';
 import { trendingGifsAction } from './trending.actions';
 
 const mapStateToProps = state => ({
-  data: dataSelector(state),
+  data: trendingGifs(state),
 });
 
 const mapDispatchToProps = dispatch => ({
   getTrendingGifs: () => dispatch(trendingGifsAction()),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(TrendingComponent);
+export const TrendingContainer = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(TrendingComponent);
