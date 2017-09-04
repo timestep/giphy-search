@@ -13,7 +13,7 @@ const style = {
 };
 
 export const AppComponent = () => (
-  <div className="h-100 w-100 flex flex-column mt3">
+  <div className="vh-100 w-100 flex flex-column pt3 bg-black white">
     <div style={style.topContainer}>
       <QueryContainer />
     </div>
