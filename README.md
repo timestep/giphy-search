@@ -1,10 +1,14 @@
 # GIF searcher
 
 ## Requirements
-`yarn`
-`node v8+`
+```
+yarn
+node v8+
+```
 
 ## Install
-`yarn install`
-`npm start`
+```
+- yarn install
+- npm start
+```
 
