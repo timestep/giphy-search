@@ -11,7 +11,7 @@ const initialState = {
   queryHistory: [],
   imageHistory: [],
   error: {},
-  selectedImage: [],
+  selectedImage: {},
 };
 
 export const queryReducer = (state = initialState, action) => {
@@ -32,7 +32,7 @@ export const queryReducer = (state = initialState, action) => {
     return {
       ...state,
       isLoading: false,
-      selectedImage: action.payload,
+      selectedImage: action.payload ? action.payload : {},
       imageHistory: state.imageHistory.concat([action.payload]),
     };
   case SELECT_HISTORICAL_IMAGE:

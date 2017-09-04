@@ -9,6 +9,7 @@ export const HistoricalQueriesComponent = ({
     {
       historicalQueries.map((query, idx) => (
         <div
+          className="pointer"
           key={idx}
           onClick={() => selectHistoricalImage(idx)}
         >

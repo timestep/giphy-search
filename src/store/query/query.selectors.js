@@ -14,5 +14,5 @@ export const querySelectedImageSelector = createSelector(
 
 export const queryImageSelector = createSelector(
   querySelectedImageSelector,
-  query => query ? query : {},
+  selectedImage => selectedImage.images ? selectedImage.images.fixed_height_downsampled.url : '',
 );

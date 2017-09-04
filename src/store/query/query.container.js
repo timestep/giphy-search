@@ -10,7 +10,7 @@ import {
 } from './query.actions';
 
 const mapStateToProps = state => ({
-  image: queryImageSelector(state),
+  url: queryImageSelector(state),
   historicalQueries: historicalQueriesSelector(state),
 });
 

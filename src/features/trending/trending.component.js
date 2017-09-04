@@ -1,6 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+const style = {
+  height: '100%',
+  width: '100%',
+  objectFit: 'contain',
+};
 export class TrendingComponent extends React.Component {
   componentDidMount() {
     this.props.getTrendingGifs();
@@ -12,14 +16,18 @@ export class TrendingComponent extends React.Component {
     } = this.props;
 
     return (
-      <div>
-        {images.map(img => (
-          <img
-            alt=""
-            key={img.id}
-            src={img.images.downsized_medium.url}
-          />
-        ))}
+      <div className="h-inherit">
+        <div className="f1 w-100 tc"> Trending GIFS </div>
+        <div className="w-100 flex flex-row overflow-x-scroll h-inherit">
+          {images.map(img => (
+            <img
+              alt=""
+              style={style}
+              key={img.id}
+              src={img.images.downsized_medium.url}
+            />
+          ))}
+        </div>
       </div>
     );
   }
